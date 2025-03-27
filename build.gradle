@@ -36,3 +36,7 @@ kotlin {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+bootJar {
+	archiveFileName = "fake-mq.jar" // 你可以修改为你的应用名
+}

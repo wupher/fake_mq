@@ -26,7 +26,7 @@ class MqApplication {
 
 	private val objectMapper = ObjectMapper()
 
-	@PostMapping("/send_json")
+	@PostMapping("/mq/send_json")
 	fun sendJson(@RequestBody body: Map<String, String>): WjResponse {
 		val companyCode = body["companycode"] ?: return WjResponse.parameterError("companyCode is required")
 		val dateString = body["date"] ?: return WjResponse.parameterError("date is required")
